@@ -1,0 +1,8 @@
+{
+    "client_id": "MY_AWESOME_UID",
+    "client_secret": "MY_AWESOME_SECRET",
+    "access_token": "YOUR_ACCESS_TOKEN",
+    "username": "MY_USERNAME",
+    "begin_at": "2023-11-01",
+    "end_at": "2023-11-30"
+}
