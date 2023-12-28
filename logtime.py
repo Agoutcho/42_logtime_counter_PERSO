@@ -53,8 +53,12 @@ def calculate_total_time(data):
     hours_per_day = {}
     min_per_day = {}
     for date, time in data.items():
-        hours = datetime.datetime.strptime(time, "%H:%M:%S.%f").hour
-        min = datetime.datetime.strptime(time, "%H:%M:%S.%f").minute
+        if time != "24:00:00":
+            hours = datetime.datetime.strptime(time, "%H:%M:%S.%f").hour
+            min = datetime.datetime.strptime(time, "%H:%M:%S.%f").minute
+        else:
+            hours = 24
+            min = 0
         hours_per_day[date] = hours
         min_per_day[date] = min
         print(f"Date : {date} | {hours} | {min}")
